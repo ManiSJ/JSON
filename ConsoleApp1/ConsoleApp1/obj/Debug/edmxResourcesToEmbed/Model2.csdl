@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model2" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model2Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Entity1" EntityType="Model2.Entity1" />
+    <EntitySet Name="Entity2" EntityType="Model2.Entity2" />
+    <AssociationSet Name="Entity1Entity2" Association="Model2.Entity1Entity2">
+      <End Role="Entity1" EntitySet="Entity1" />
+      <End Role="Entity2" EntitySet="Entity2" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Entity1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Entity2" Relationship="Model2.Entity1Entity2" FromRole="Entity1" ToRole="Entity2" />
+  </EntityType>
+  <EntityType Name="Entity2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Entity1" Relationship="Model2.Entity1Entity2" FromRole="Entity2" ToRole="Entity1" />
+    <Property Name="Entity1Id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="Entity1Entity2">
+    <End Type="Model2.Entity1" Role="Entity1" Multiplicity="1" />
+    <End Type="Model2.Entity2" Role="Entity2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entity1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Entity2">
+        <PropertyRef Name="Entity1Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
