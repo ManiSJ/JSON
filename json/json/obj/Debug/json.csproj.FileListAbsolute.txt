@@ -1,0 +1,11 @@
+C:\Users\sjman\source\repos\json\json\bin\Debug\json.exe.config
+C:\Users\sjman\source\repos\json\json\bin\Debug\json.exe
+C:\Users\sjman\source\repos\json\json\bin\Debug\json.pdb
+C:\Users\sjman\source\repos\json\json\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sjman\source\repos\json\json\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\sjman\source\repos\json\json\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sjman\source\repos\json\json\obj\Debug\json.csprojAssemblyReference.cache
+C:\Users\sjman\source\repos\json\json\obj\Debug\json.csproj.CoreCompileInputs.cache
+C:\Users\sjman\source\repos\json\json\obj\Debug\json.csproj.CopyComplete
+C:\Users\sjman\source\repos\json\json\obj\Debug\json.exe
+C:\Users\sjman\source\repos\json\json\obj\Debug\json.pdb
